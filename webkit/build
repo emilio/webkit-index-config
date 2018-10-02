@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e # Errors are fatal
+set -x # Show commands
+
+date
+
+# Add the special clang flags.
+eval "$($MOZSEARCH_PATH/scripts/indexer-setup.py)"
+# . $FILES_ROOT/Tools/Scripts/update-webkitgtk-libs
+
+mkdir -p $OBJDIR
+cd $OBJDIR
+cmake $FILES_ROOT -DPORT=JSCOnly -DCMAKE_BUILD_TYPE=Debug
+make -j$(nproc) VERBOSE=1
+cd -
+
+date

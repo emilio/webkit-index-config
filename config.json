@@ -1,0 +1,15 @@
+{
+  "mozsearch_path": "$MOZSEARCH_PATH",
+
+  "trees": {
+    "webkit": {
+      "index_path": "$WORKING/webkit",
+      "files_path": "$WORKING/webkit/WebKit",
+      "git_path": "$WORKING/webkit/WebKit",
+      "git_blame_path": "$WORKING/webkit/blame",
+      "objdir_path": "$WORKING/webkit/WebKit/target",
+      "codesearch_path": "$WORKING/webkit/livegrep.idx",
+      "codesearch_port": 8081
+    }
+  }
+}
