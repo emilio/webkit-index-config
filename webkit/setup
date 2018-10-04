@@ -11,7 +11,7 @@ if [ -d "WebKit" ]
 then
     echo "Found pre-existing folder; skipping re-download."
 else
-    git clone https://github.com/WebKit/webkit WebKit
+    git clone git://git.webkit.org/WebKit WebKit
 fi
 popd
 
