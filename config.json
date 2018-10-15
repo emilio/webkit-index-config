@@ -7,6 +7,7 @@
       "files_path": "$WORKING/webkit/WebKit",
       "git_path": "$WORKING/webkit/WebKit",
       "git_blame_path": "$WORKING/webkit/blame",
+      "github_repo": "https://github.com/WebKit/webkit",
       "objdir_path": "$WORKING/webkit/WebKit/target",
       "codesearch_path": "$WORKING/webkit/livegrep.idx",
       "codesearch_port": 8081
