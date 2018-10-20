@@ -1,1 +1,72 @@
-TBD
+<div class="intro">
+
+<h1>Welcome to Searchfox</h1>
+
+<h3>
+  <a href="/webkit/source" style="text-decoration: underline;">Direct link to webkit</a>
+</h3>
+
+<p>
+This is an indexed version of WebKit using Searchfox. It only indexes JSC for
+now, since the Server it's hosted on is not very powerful.
+
+You can contribute to Searchfox! Visit
+our <a href="https://github.com/mozsearch/mozsearch">Github page</a>.
+
+<h3>Query Language</h3>
+
+Queries entered into the search box use exact string matching. No
+search operators are supported. Case insensitive matching and regular
+expression matching can be requested with the check boxes.
+
+Path filtering uses globbing. A path matches even if only a substring
+of the path is matched by the glob. Use the <code>^</code>
+and <code>$</code> operators to match the beginning or end of the
+path. Here are some examples:
+
+<dl>
+
+<dt><code>test</code></dt>
+<dd>Find all paths containing the substring "<code>test</code>".
+
+<dt><code>^js/src</code></dt>
+<dd>Find all paths starting with <code>js/src</code>.
+
+<dt><code>*.cpp</code></dt>
+<dd>Find all paths containing "<code>.cpp</code>".
+
+<dt><code>*.cpp$</code></dt>
+<dd>Find all paths ending with "<code>.cpp</code>".
+
+<dt><code>^js/src/*.cpp$</code></dt>
+<dd>Find all C++ files in <code>js/src</code>, but not in
+subdirectories (i.e., <code>*</code> does not match <code>/</code>).
+
+<dt><code>^js/src/**.cpp$</code></dt>
+<dd>Find all C++ files in <code>js/src</code> or in subdirectories
+(i.e., <code>**</code> matches <code>/</code>).
+
+<dt><code>^js/src/**.{cpp,h}$</code></dt>
+<dd>Find all C++ source or header files in <code>js/src</code> or in subdirectories.
+
+</dl>
+
+<h3>Cross-referencing</h3>
+
+Once you have arrived at a file, you can mouse over identifiers. If
+the color of the identifier changes, then clicking on the identifier
+will open a context menu for cross-referencing identifiers.
+
+<h3>Syntax Highlighting</h3>
+
+Searchfox uses semantic syntax highlighting. Types are shown in teal
+(blue-green). Definitions are shown in bold. Hovering over an
+identifier highlights other uses of that identifier.
+
+<h3>Bug reports</h3>
+
+Please send Searchfox bug reports to
+<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Webtools&component=Searchfox">Bugzilla</a>, and WebKit-specific bug reports to
+<a href="https://github.com/emilio/webkit-index-config">GitHub</a>.
+
+</div>
